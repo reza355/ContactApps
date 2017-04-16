@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IwX-x5-lKV">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Contact ListVC-->
+        <!--Contact-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ContactListVC" customModule="GO_JEK_Contact" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,11 +21,92 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VFb-Sz-Qzn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactListCell" rowHeight="90" id="Yhr-xZ-7bo" customClass="ContactListCell" customModule="GO_JEK_Contact" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yhr-xZ-7bo" id="0vc-gv-cP8">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H0L-CU-XfA" customClass="RoundedImage" customModule="GO_JEK_Contact" customModuleProvider="target">
+                                                    <rect key="frame" x="28" y="15" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="kxn-GL-hsv"/>
+                                                        <constraint firstAttribute="width" constant="60" id="v9X-zI-KcK"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maman Suratman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sE1-91-usr">
+                                                    <rect key="frame" x="103" y="22" width="212" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="efE-bI-64T"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v21-MA-98s">
+                                                    <rect key="frame" x="330" y="31.5" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="25" id="KUq-m1-YR0"/>
+                                                        <constraint firstAttribute="height" constant="25" id="m1z-y4-6Wu"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="v21-MA-98s" secondAttribute="trailing" constant="20" id="Je8-H1-9SU"/>
+                                                <constraint firstItem="sE1-91-usr" firstAttribute="centerY" secondItem="0vc-gv-cP8" secondAttribute="centerY" id="Pce-Ib-47z"/>
+                                                <constraint firstItem="H0L-CU-XfA" firstAttribute="leading" secondItem="0vc-gv-cP8" secondAttribute="leadingMargin" constant="20" id="XaA-Xd-Hzu"/>
+                                                <constraint firstItem="H0L-CU-XfA" firstAttribute="centerY" secondItem="0vc-gv-cP8" secondAttribute="centerY" id="glq-hE-wNt"/>
+                                                <constraint firstItem="v21-MA-98s" firstAttribute="centerY" secondItem="0vc-gv-cP8" secondAttribute="centerY" id="ouy-9b-Q6R"/>
+                                                <constraint firstItem="sE1-91-usr" firstAttribute="leading" secondItem="H0L-CU-XfA" secondAttribute="trailing" constant="15" id="pG2-pT-zK7"/>
+                                                <constraint firstItem="v21-MA-98s" firstAttribute="leading" secondItem="sE1-91-usr" secondAttribute="trailing" constant="15" id="vss-db-QQw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLbl" destination="sE1-91-usr" id="5pR-TZ-Vst"/>
+                                            <outlet property="photoImg" destination="H0L-CU-XfA" id="nsb-NF-FTY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VFb-Sz-Qzn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9UR-By-LdG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VFb-Sz-Qzn" secondAttribute="bottom" id="Ep9-fw-Chz"/>
+                            <constraint firstItem="VFb-Sz-Qzn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="owK-KB-Yhn"/>
+                            <constraint firstAttribute="trailing" secondItem="VFb-Sz-Qzn" secondAttribute="trailing" id="r1m-HJ-by4"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Contact" id="Vsj-Ce-dw5"/>
+                    <connections>
+                        <outlet property="tableview" destination="VFb-Sz-Qzn" id="9sQ-kT-CnZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="397.60000000000002" y="55.322338830584712"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Cb0-c4-Fgb">
+            <objects>
+                <navigationController id="IwX-x5-lKV" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uxe-vx-PMG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CE3-f5-00P"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yu7-Lf-ik8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-528" y="40"/>
         </scene>
     </scenes>
 </document>

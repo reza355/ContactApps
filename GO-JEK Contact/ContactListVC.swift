@@ -11,21 +11,37 @@ import Alamofire
 import RealmSwift
 import SwiftyJSON
 
-class ContactListVC: UIViewController {
+class ContactListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var tableview: UITableView!
+    
     var contact = List<Contact>()
+    let contacts = try! Realm().objects(Contact.self).sorted(byKeyPath: "firstName", ascending: true)
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        tableview.delegate = self
+        tableview.dataSource = self
         downloadContent {
         }
-    }
-    override func viewDidAppear(_ animated: Bool) {
         realmQuery()
     }
-    
-    
-    
+    override func viewDidAppear(_ animated: Bool) {
+    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return contacts.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "ContactListCell", for: indexPath) as? ContactListCell{
+            cell.configurePost(post: contacts[indexPath.row])
+            return cell
+        }else{
+            return ContactListCell()
+        }
+    }
     
     //REALM CODE
     func realmQuery(){
@@ -33,6 +49,7 @@ class ContactListVC: UIViewController {
             let realm = try Realm()
             let contacts = realm.objects(Contact.self)
             let sort = contacts.sorted(byKeyPath: "firstName", ascending: true)
+            tableview.reloadData()
             print(sort)
         }catch let error as NSError{
             print(error)
@@ -82,7 +99,6 @@ class ContactListVC: UIViewController {
                                 self.present(alert, animated: true, completion: nil)
                             }
                         }
-                        
                     }
                 }
             case .failure(let error):

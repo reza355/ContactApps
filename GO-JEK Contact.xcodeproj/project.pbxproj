@@ -15,6 +15,8 @@
 		60178BBC1EA16487002C9803 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60178BBA1EA16487002C9803 /* LaunchScreen.storyboard */; };
 		604BAB1C1EA16902007563F1 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604BAB1B1EA16902007563F1 /* Constant.swift */; };
 		6071726B1EA16596009EE57E /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6071726A1EA16596009EE57E /* Contact.swift */; };
+		609A49ED1EA3AB7F00829404 /* ContactListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609A49EC1EA3AB7F00829404 /* ContactListCell.swift */; };
+		609A49EF1EA3ABB500829404 /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609A49EE1EA3ABB500829404 /* RoundedImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		60178BBD1EA16487002C9803 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		604BAB1B1EA16902007563F1 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		6071726A1EA16596009EE57E /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		609A49EC1EA3AB7F00829404 /* ContactListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListCell.swift; sourceTree = "<group>"; };
+		609A49EE1EA3ABB500829404 /* RoundedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
 		A753B1143D8856C18CA9D1F8 /* Pods-GO-JEK Contact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GO-JEK Contact.release.xcconfig"; path = "Pods/Target Support Files/Pods-GO-JEK Contact/Pods-GO-JEK Contact.release.xcconfig"; sourceTree = "<group>"; };
 		C1EEC459C23BA196B6F8A696 /* Pods_GO_JEK_Contact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GO_JEK_Contact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -105,7 +109,9 @@
 			isa = PBXGroup;
 			children = (
 				60178BB51EA16487002C9803 /* Main.storyboard */,
+				609A49EE1EA3ABB500829404 /* RoundedImage.swift */,
 				60178BBA1EA16487002C9803 /* LaunchScreen.storyboard */,
+				609A49EC1EA3AB7F00829404 /* ContactListCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -251,7 +257,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6071726B1EA16596009EE57E /* Contact.swift in Sources */,
+				609A49ED1EA3AB7F00829404 /* ContactListCell.swift in Sources */,
 				60178BB41EA16487002C9803 /* ContactListVC.swift in Sources */,
+				609A49EF1EA3ABB500829404 /* RoundedImage.swift in Sources */,
 				60178BB21EA16487002C9803 /* AppDelegate.swift in Sources */,
 				604BAB1C1EA16902007563F1 /* Constant.swift in Sources */,
 			);
