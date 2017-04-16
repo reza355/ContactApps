@@ -1,0 +1,6 @@
+framework module Pods_GO_JEK_Contact {
+  umbrella header "Pods-GO-JEK Contact-umbrella.h"
+
+  export *
+  module * { export * }
+}
