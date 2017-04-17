@@ -25,7 +25,7 @@ class ContactListCell: UITableViewCell {
         // Configure the view for the selected state
     }
     func configurePost(post: Contact){
-        nameLbl.text = "\(post.firstName) \(post.lastName)"
+        nameLbl.text = "\(post.firstName!) \(post.lastName!)"
     }
     
 
