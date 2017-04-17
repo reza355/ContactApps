@@ -21,6 +21,7 @@
 		609A49EF1EA3ABB500829404 /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609A49EE1EA3ABB500829404 /* RoundedImage.swift */; };
 		609A49F11EA3D74E00829404 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609A49F01EA3D74E00829404 /* RoundedButton.swift */; };
 		609A49F31EA3DB4600829404 /* ContactDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609A49F21EA3DB4600829404 /* ContactDetailVC.swift */; };
+		60B2D7BD1EA4D81A0064BDB6 /* AddContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B2D7BC1EA4D81A0064BDB6 /* AddContactVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		609A49EE1EA3ABB500829404 /* RoundedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
 		609A49F01EA3D74E00829404 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		609A49F21EA3DB4600829404 /* ContactDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailVC.swift; sourceTree = "<group>"; };
+		60B2D7BC1EA4D81A0064BDB6 /* AddContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContactVC.swift; sourceTree = "<group>"; };
 		A753B1143D8856C18CA9D1F8 /* Pods-GO-JEK Contact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GO-JEK Contact.release.xcconfig"; path = "Pods/Target Support Files/Pods-GO-JEK Contact/Pods-GO-JEK Contact.release.xcconfig"; sourceTree = "<group>"; };
 		C1EEC459C23BA196B6F8A696 /* Pods_GO_JEK_Contact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GO_JEK_Contact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -132,6 +134,7 @@
 				60178BB31EA16487002C9803 /* ContactListVC.swift */,
 				609A49F21EA3DB4600829404 /* ContactDetailVC.swift */,
 				6010DBD41EA4B1BC0011ED30 /* EditContactVC.swift */,
+				60B2D7BC1EA4D81A0064BDB6 /* AddContactVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				60178BB21EA16487002C9803 /* AppDelegate.swift in Sources */,
 				6010DBD31EA4A7AE0011ED30 /* ViewStyling.swift in Sources */,
 				604BAB1C1EA16902007563F1 /* Constant.swift in Sources */,
+				60B2D7BD1EA4D81A0064BDB6 /* AddContactVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

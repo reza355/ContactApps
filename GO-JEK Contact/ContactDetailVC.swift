@@ -124,14 +124,13 @@ class ContactDetailVC: UIViewController {
         }
     }
     func updateData(favVal: Bool, update: Date){
-        let urlString = URL(string: contactDetail.url)!
-        print(urlString)
+        let urlString = URL(string: "http://gojek-contacts-app.herokuapp.com/contacts/\(contactDetail.contactId).json")
         let dateString = "\(update)"
         let header: HTTPHeaders = [
 
             "Content-Type": "application/json"
         ]
-        Alamofire.request(urlString, method: .put, parameters: ["favorite": favVal, "updated_at": dateString], encoding: JSONEncoding.default, headers: header).responseJSON{ response in
+        Alamofire.request(urlString!, method: .put, parameters: ["favorite": favVal, "updated_at": dateString], encoding: JSONEncoding.default, headers: header).responseJSON{ response in
             switch response.result {
             case .success:
                 if let value = response.result.value{

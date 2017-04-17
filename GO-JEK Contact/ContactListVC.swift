@@ -60,6 +60,9 @@ class ContactListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     func updateUI(){
         tableview.reloadData()
     }
+    @IBAction func addContactBtn(_ sender: UIBarButtonItem){
+        performSegue(withIdentifier: "AddContactVC", sender: self)
+    }
     
     //REALM CODE
     func downloadContent(completed: @escaping DownloadComplete){
