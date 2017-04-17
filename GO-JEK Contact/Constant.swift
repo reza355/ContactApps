@@ -10,4 +10,5 @@ import Foundation
 
 typealias DownloadComplete = () -> ()
 let CONTACT_URL = "http://gojek-contacts-app.herokuapp.com/contacts.json"
-let CONTACT_DETAIL_URL = "http://gojek-contacts-app.herokuapp.com/contacts/" 
+let CONTACT_DETAIL_URL = "http://gojek-contacts-app.herokuapp.com/contacts/"
+let IMAGE_URL = "http://gojek-contacts-app.herokuapp.com"

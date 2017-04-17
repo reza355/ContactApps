@@ -1,5 +1,5 @@
 //
-//  RoundedImage.swift
+//  RoundedButton.swift
 //  GO-JEK Contact
 //
 //  Created by Fathureza Januarza on 4/16/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RoundedImage: UIImageView {
+class RoundedButton: UIButton {
 
     override func awakeFromNib() {
         super.awakeFromNib()

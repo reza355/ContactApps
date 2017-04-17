@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		28A56725DF76C49701031F73 /* Pods_GO_JEK_Contact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1EEC459C23BA196B6F8A696 /* Pods_GO_JEK_Contact.framework */; };
+		6010DBD31EA4A7AE0011ED30 /* ViewStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6010DBD21EA4A7AE0011ED30 /* ViewStyling.swift */; };
+		6010DBD51EA4B1BC0011ED30 /* EditContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6010DBD41EA4B1BC0011ED30 /* EditContactVC.swift */; };
 		60178BB21EA16487002C9803 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60178BB11EA16487002C9803 /* AppDelegate.swift */; };
 		60178BB41EA16487002C9803 /* ContactListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60178BB31EA16487002C9803 /* ContactListVC.swift */; };
 		60178BB71EA16487002C9803 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60178BB51EA16487002C9803 /* Main.storyboard */; };
@@ -17,10 +19,14 @@
 		6071726B1EA16596009EE57E /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6071726A1EA16596009EE57E /* Contact.swift */; };
 		609A49ED1EA3AB7F00829404 /* ContactListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609A49EC1EA3AB7F00829404 /* ContactListCell.swift */; };
 		609A49EF1EA3ABB500829404 /* RoundedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609A49EE1EA3ABB500829404 /* RoundedImage.swift */; };
+		609A49F11EA3D74E00829404 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609A49F01EA3D74E00829404 /* RoundedButton.swift */; };
+		609A49F31EA3DB4600829404 /* ContactDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609A49F21EA3DB4600829404 /* ContactDetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4EFE2275D17D0A30AA0DE712 /* Pods-GO-JEK Contact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GO-JEK Contact.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GO-JEK Contact/Pods-GO-JEK Contact.debug.xcconfig"; sourceTree = "<group>"; };
+		6010DBD21EA4A7AE0011ED30 /* ViewStyling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewStyling.swift; sourceTree = "<group>"; };
+		6010DBD41EA4B1BC0011ED30 /* EditContactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditContactVC.swift; sourceTree = "<group>"; };
 		60178BAE1EA16487002C9803 /* GO-JEK Contact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GO-JEK Contact.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60178BB11EA16487002C9803 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60178BB31EA16487002C9803 /* ContactListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListVC.swift; sourceTree = "<group>"; };
@@ -32,6 +38,8 @@
 		6071726A1EA16596009EE57E /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		609A49EC1EA3AB7F00829404 /* ContactListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListCell.swift; sourceTree = "<group>"; };
 		609A49EE1EA3ABB500829404 /* RoundedImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImage.swift; sourceTree = "<group>"; };
+		609A49F01EA3D74E00829404 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		609A49F21EA3DB4600829404 /* ContactDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailVC.swift; sourceTree = "<group>"; };
 		A753B1143D8856C18CA9D1F8 /* Pods-GO-JEK Contact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GO-JEK Contact.release.xcconfig"; path = "Pods/Target Support Files/Pods-GO-JEK Contact/Pods-GO-JEK Contact.release.xcconfig"; sourceTree = "<group>"; };
 		C1EEC459C23BA196B6F8A696 /* Pods_GO_JEK_Contact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GO_JEK_Contact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -109,8 +117,10 @@
 			isa = PBXGroup;
 			children = (
 				60178BB51EA16487002C9803 /* Main.storyboard */,
-				609A49EE1EA3ABB500829404 /* RoundedImage.swift */,
 				60178BBA1EA16487002C9803 /* LaunchScreen.storyboard */,
+				6010DBD21EA4A7AE0011ED30 /* ViewStyling.swift */,
+				609A49EE1EA3ABB500829404 /* RoundedImage.swift */,
+				609A49F01EA3D74E00829404 /* RoundedButton.swift */,
 				609A49EC1EA3AB7F00829404 /* ContactListCell.swift */,
 			);
 			name = View;
@@ -120,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				60178BB31EA16487002C9803 /* ContactListVC.swift */,
+				609A49F21EA3DB4600829404 /* ContactDetailVC.swift */,
+				6010DBD41EA4B1BC0011ED30 /* EditContactVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -167,7 +179,7 @@
 				TargetAttributes = {
 					60178BAD1EA16487002C9803 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 7UJJ655T8G;
+						DevelopmentTeam = M99P368PR4;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -256,11 +268,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6010DBD51EA4B1BC0011ED30 /* EditContactVC.swift in Sources */,
+				609A49F31EA3DB4600829404 /* ContactDetailVC.swift in Sources */,
 				6071726B1EA16596009EE57E /* Contact.swift in Sources */,
 				609A49ED1EA3AB7F00829404 /* ContactListCell.swift in Sources */,
 				60178BB41EA16487002C9803 /* ContactListVC.swift in Sources */,
 				609A49EF1EA3ABB500829404 /* RoundedImage.swift in Sources */,
+				609A49F11EA3D74E00829404 /* RoundedButton.swift in Sources */,
 				60178BB21EA16487002C9803 /* AppDelegate.swift in Sources */,
+				6010DBD31EA4A7AE0011ED30 /* ViewStyling.swift in Sources */,
 				604BAB1C1EA16902007563F1 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,7 +401,7 @@
 			baseConfigurationReference = 4EFE2275D17D0A30AA0DE712 /* Pods-GO-JEK Contact.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7UJJ655T8G;
+				DEVELOPMENT_TEAM = M99P368PR4;
 				INFOPLIST_FILE = "GO-JEK Contact/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tedihouse.GO-JEK-Contact";
@@ -399,7 +415,7 @@
 			baseConfigurationReference = A753B1143D8856C18CA9D1F8 /* Pods-GO-JEK Contact.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7UJJ655T8G;
+				DEVELOPMENT_TEAM = M99P368PR4;
 				INFOPLIST_FILE = "GO-JEK Contact/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tedihouse.GO-JEK-Contact";

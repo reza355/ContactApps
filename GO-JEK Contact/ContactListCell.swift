@@ -21,7 +21,12 @@ class ContactListCell: UITableViewCell {
     func configurePost(post: Contact){
         
         nameLbl.text = "\(post.firstName) \(post.lastName)"
-        photoImg.imageFromServerURL(urlString: "http://gojek-contacts-app.herokuapp.com\(post.profilePic)")
+        photoImg.imageFromServerURL(urlString: "\(IMAGE_URL)\(post.profilePic)")
+        if post.favorite == true{
+            favoriteImg.image = UIImage(named: "star.png")
+        }else if post.favorite == false{
+            favoriteImg.image = UIImage(named: "")
+        }
     }
     
 

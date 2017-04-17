@@ -22,17 +22,24 @@ class ContactListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         // Do any additional setup after loading the view, typically from a nib.
         tableview.delegate = self
         tableview.dataSource = self
-        downloadContent {
-        }
-        realmQuery()
+        downloadContent {}
     }
     override func viewDidAppear(_ animated: Bool) {
+        //tableview.reloadData()
+        //updateUI()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        updateUI()
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contacts.count
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data = contacts[indexPath.row]
+        performSegue(withIdentifier: "ContactDetailVC", sender: data)
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "ContactListCell", for: indexPath) as? ContactListCell{
@@ -42,19 +49,19 @@ class ContactListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
             return ContactListCell()
         }
     }
-    
-    //REALM CODE
-    func realmQuery(){
-        do{
-            let realm = try Realm()
-            let contacts = realm.objects(Contact.self)
-            let sort = contacts.sorted(byKeyPath: "firstName", ascending: true)
-            tableview.reloadData()
-            print(sort)
-        }catch let error as NSError{
-            print(error)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ContactDetailVC"{
+            let detailVC = segue.destination as? ContactDetailVC
+            if let data = sender as? Contact{
+                detailVC?.contactDetail = data
+            }
         }
     }
+    func updateUI(){
+        tableview.reloadData()
+    }
+    
+    //REALM CODE
     func downloadContent(completed: @escaping DownloadComplete){
         let loginURL = URL(string: CONTACT_URL)
         Alamofire.request(loginURL!, method: .get).responseJSON{ response in
@@ -75,13 +82,11 @@ class ContactListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                             case .success:
                                 if let value = response.result.value{
                                     let jsonDetail = JSON(value)
-                                    print(jsonDetail)
                                     let email = jsonDetail["email"].stringValue
                                     let phone = jsonDetail["phone_number"].stringValue
                                     let created = jsonDetail["created_at"].date
                                     let updated = jsonDetail["updated_at"].date
                                     let contactData = Contact(value: ["contactId": id, "firstName": firstName, "lastName": lastName, "profilePic": profilePic, "favorite": favorite, "url": url, "email": email, "phoneNumber": phone, "createdAt": created, "updatedAt": updated])
-                                    //print(contactData)
                                     self.contact.append(contactData)
                                     do{
                                         let realm = try! Realm()
@@ -91,6 +96,7 @@ class ContactListVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                                     }catch let error as NSError{
                                         print(error)
                                     }
+                                    self.updateUI()
                                 }
                             case .failure(let error):
                                 print(error)
